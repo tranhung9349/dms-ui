@@ -72,6 +72,7 @@ table>:not(caption)>*>* {
     line-height: 130%;
     padding: 6px 16px;
     background: var(--greyscale-new-lighter, #F6F6F6);
+    white-space: nowrap;
 }
 
 .table {
@@ -98,6 +99,7 @@ table>:not(caption)>*>* {
     line-height: 150%;
     text-transform: capitalize;
     border: transparent;
+    /* text-align: center; */
 }
 
 .table>thead>tr>th:first-child {

@@ -109,21 +109,36 @@ ol.timeline>li {
 }
 
 #treeview .parent:before {
-    padding: 2px 6px;
-    content: "+";
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    /* content: "+"; */
+    content: "\f107";
     /* border: 1px solid; */
     background-color: #F1F1F1;
     border-radius: 4px;
     position: absolute;
     left: -26px;
+    font-family: "Font Awesome 6 Pro";
+    color: #F24E4E;
 }
 
 #treeview .close:before {
     background-position: 0 top;
-    content: "-";
+    content: "\f105";
+    font-family: "Font Awesome 6 Pro";
+    color: #F24E4E;
 }
 
-#treeview .parent.close::after {
+#treeview .parent::after {
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    background-color: #F1F1F1;
+}
+
+#treeview .parent::after {
     content: " ";
     border-left: 1px solid #F1F1F1;
     position: absolute;
@@ -131,8 +146,8 @@ ol.timeline>li {
     height: 100%;
     top: 22px;
     left: -16px;
-    /* background-color: #F1F1F1;
-    border-radius: 4px; */
+    background-color: #F1F1F1;
+    /* border-radius: 4px; */
 }
 
 #treeview .parent>ul>li {
@@ -198,7 +213,12 @@ ul#treeview>.parent {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 8px;
+}
+
+.page-header>div {
+    flex-wrap: inherit;
+    gap: inherit;
 }
 
 .page-header .page-title {
