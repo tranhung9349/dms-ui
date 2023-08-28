@@ -221,3 +221,17 @@ ul#treeview>.parent {
 .tr-custom td {
     background-color: #FFECD3 !important;
 }
+
+
+.tab-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+@media screen and (max-width: 767px) {
+    .tab-header > div {
+        flex-wrap: inherit;
+        gap: inherit;
+    }
+}
