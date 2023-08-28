@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/variable.css"/>
     <link rel="stylesheet" href="./css/layout.css"/>
 
-    <title>Danh mục phòng ban</title>
+    <title>Danh mục phòng ban chức danh</title>
 </head>
 <body>
     <main class="main-layout">
@@ -51,9 +51,9 @@
           <ul class="btn-toggle-nav list-unstyled fw-normal small mb-0">
             <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Nhóm người dùng</a></li>
             <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Chức danh</a></li>
-            <li class="my-3 menu-item-active"><a href="#" class="group-menu-item rounded">Danh mục Phòng ban</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Phòng ban</a></li>
             <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Nơi gửi /nhận văn bản</a></li>
-            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Phòng ban chức danh</a></li>
+            <li class="my-3 menu-item-active"><a href="#" class="group-menu-item rounded">Danh mục Phòng ban chức danh</a></li>
             <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Luồng chuyển văn bản</a></li>
             <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Số văn bản</a></li>
             <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Loại văn bản</a></li>
@@ -154,7 +154,7 @@
             <div class="page-header">
                 <div class="d-flex align-items-center">
                     <div class="page-title ps-4">
-                        <span>Danh mục phòng ban</span>
+                        <span>Danh mục phòng ban chức danh</span>
                         <span class="badge rounded-pill ms-1">14</span>
                     </div>
                     <span class="ms-4">
@@ -230,9 +230,9 @@
                       <thead class="table-light ">
                           <tr>
                               <th scope="col">STT <i class="fa-solid fa-sort"></i></th>
-                              <th scope="col" >Tên người dùng <i class="fa-solid fa-sort"></i></th>
-                              <th scope="col" >Họ tên đầy đủ <i class="fa-solid fa-sort"></i></th>
-                              <th scope="col"> Chức danh<i class="fa-solid fa-sort"></i></th>
+                              <th scope="col" >Mã chức danh <i class="fa-solid fa-sort"></i></th>
+                              <th scope="col" >Tên chức danh <i class="fa-solid fa-sort"></i></th>
+                              <th scope="col"> Trạng thái <i class="fa-solid fa-sort"></i></th>
                           </tr>
                       </thead>
                       <tbody>
@@ -250,7 +250,11 @@
                               </td>
                               <td>Travaux de rénovation</td>
                               <td>Darrell Steward</td>
-                              <td>Capital</td>
+                              <td>
+                                <div class="form-check d-flex justify-content-center">
+                                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                </div>
+                              </td>
                           </tr>
                       </tbody>
                   </table>

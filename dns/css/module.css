@@ -122,6 +122,15 @@ table>:not(caption)>*>* {
     display: table-row;
 }
 
+.table thead tr th {
+    text-align: center;
+}
+
+.table tbody tr td {
+    text-align: center;
+}
+
+
 
 input[type="checkbox"],
 input[type="text"]:not(.form-control) {
