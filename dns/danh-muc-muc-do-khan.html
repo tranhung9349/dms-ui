@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/variable.css"/>
     <link rel="stylesheet" href="./css/layout.css"/>
 
-    <title>Danh Mục Nơi Gửi/Nhận Văn Bản</title>
+    <title>Danh Mục Độ Khẩn </title>
 </head>
 <body>
     <main class="main-layout">
@@ -52,13 +52,13 @@
               <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Nhóm người dùng</a></li>
               <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Chức danh</a></li>
               <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Phòng ban</a></li>
-              <li class="my-3 menu-item-active"><a href="#" class="group-menu-item rounded">Danh mục Nơi gửi /nhận văn bản</a></li>
+              <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Nơi gửi /nhận văn bản</a></li>
               <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Phòng ban chức danh</a></li>
               <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Luồng chuyển văn bản</a></li>
               <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Số văn bản</a></li>
               <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Loại văn bản</a></li>
               <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Người ký</a></li>
-              <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Mức độ khẩn</a></li>
+              <li class="my-3 menu-item-active"><a href="#" class="group-menu-item rounded">Danh mục Mức độ khẩn</a></li>
               <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Uỷ quyền</a></li>
             </ul>
           </div>
@@ -155,7 +155,7 @@
             <div class="page-header">
                 <div class="d-flex align-items-center">
                     <div class="page-title ps-4">
-                        <span>Danh mục nơi gửi nhận văn bản</span>
+                        <span>Danh Mục Độ Khẩn </span>
                         <span class="badge rounded-pill ms-1">14</span>
                     </div>
                     <span class="ms-4">
@@ -163,7 +163,7 @@
                     </span>
                 </div>
                 <div>
-                    <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#create-doc-destination"><i class="fa-regular fa-plus me-2"></i>Thêm mới</button>
+                    <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#create-urgency-level"><i class="fa-regular fa-plus me-2"></i>Thêm mới</button>
                   </div>
             </div>
             <div class="page-content">
@@ -173,13 +173,8 @@
                         <thead class="table-light ">
                             <tr>
                                 <th scope="col">STT <i class="fa-solid fa-sort"></i></th>
-                                <th scope="col" >Mã nơi gửi/nhận <i class="fa-solid fa-sort"></i></th>
-                                <th scope="col" >Tên nơi gửi/nhận <i class="fa-solid fa-sort"></i></th>
-                                <th scope="col">Tên tiếng Anh <i class="fa-solid fa-sort"></i></th>
-                                <th scope="col">Tên viết tắt <i class="fa-solid fa-sort"></i></th>
-                                <th scope="col">Địa chỉ <i class="fa-solid fa-sort"></i></th>
-                                <th scope="col">Nơi gửi/nhận ngoài VP <i class="fa-solid fa-sort"></i></th>
-                                <th scope="col">Nơi gửi/nhận liên VP <i class="fa-solid fa-sort"></i></th>
+                                <th scope="col">Mức độ khẩn <i class="fa-solid fa-sort"></i></th>
+                                <th scope="col">Tên độ khẩn <i class="fa-solid fa-sort"></i></th>
                                 <th scope="col">Ngày cập nhật <i class="fa-solid fa-sort"></i></th>
                                 <th scope="col">Người cập nhật <i class="fa-solid fa-sort"></i></th>
                             </tr>
@@ -191,254 +186,48 @@
                                 <td><input type="text"/></td>
                                 <td><input type="text"/></td>
                                 <td><input type="text"/></td>
-                                <td><input type="text"/></td>
-                                <td><input type="text"/></td>
-                                <td><input type="text"/></td>
-                                <td><input type="text"/></td>
-                                <td><input type="text"/></td>
                             </tr>
-                            <tr class="tr-custom" data-bs-toggle="collapse" href="#tct" role="button" aria-expanded="false" aria-controls="tct">
-                                <td class="tr-collapse-icon">+</td>
-                                <td colspan="9">
-                                    Trụ sở Tổng công ty
-                                </td>
-                            </tr>
-                            <tr class="collapse show" id="tct"> 
-                                <td>3</td>
-                                <td>Travaux de rénovation</td>
-                                <td>Compte bancaire au Crédit Agricole NDF</td>
-                                <td>Fantasy Football Today</td>
-                                <td>21/02/2021 15:00</td>
-                                <td>Darrell Steward</td>
-                                <td>
-                                  <div class="form-check d-flex justify-content-center">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="form-check d-flex justify-content-center">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                  </div>
-                                </td>
-                                <td>21/02/2021 15:00</td>
-                                <td>Darrell Steward</td>
-                            </tr>
-                            <tr class="collapse show" id="tct"> 
+                            <tr > 
                               <td>3</td>
                               <td>Travaux de rénovation</td>
                               <td>Compte bancaire au Crédit Agricole NDF</td>
-                              <td>Fantasy Football Today</td>
-                              <td>21/02/2021 15:00</td>
-                              <td>Darrell Steward</td>
-                              <td>
-                                <div class="form-check d-flex justify-content-center">
-                                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                </div>
-                              </td>
-                              <td>
-                                <div class="form-check d-flex justify-content-center">
-                                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                </div>
-                              </td>
                               <td>21/02/2021 15:00</td>
                               <td>Darrell Steward</td>
                           </tr>
-                          <tr class="collapse show" id="tct"> 
-                            <td>3</td>
-                            <td>Travaux de rénovation</td>
-                            <td>Compte bancaire au Crédit Agricole NDF</td>
-                            <td>Fantasy Football Today</td>
-                            <td>21/02/2021 15:00</td>
-                            <td>Darrell Steward</td>
-                            <td>
-                              <div class="form-check d-flex justify-content-center">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                              </div>
-                            </td>
-                            <td>
-                              <div class="form-check d-flex justify-content-center">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                              </div>
-                            </td>
-                            <td>21/02/2021 15:00</td>
-                            <td>Darrell Steward</td>
-                        </tr>
-                        <tr class="collapse show" id="tct"> 
-                          <td>3</td>
-                          <td>Travaux de rénovation</td>
-                          <td>Compte bancaire au Crédit Agricole NDF</td>
-                          <td>Fantasy Football Today</td>
-                          <td>21/02/2021 15:00</td>
-                          <td>Darrell Steward</td>
-                          <td>
-                            <div class="form-check d-flex justify-content-center">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            </div>
-                          </td>
-                          <td>
-                            <div class="form-check d-flex justify-content-center">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            </div>
-                          </td>
-                          <td>21/02/2021 15:00</td>
-                          <td>Darrell Steward</td>
-                      </tr>
-                            
                         </tbody>
                     </table>
                 </div>
             </div> 
         </section>
 
-        <!--Modal Tu choi nhan-->          
-        <div class="modal fade" id="create-doc-destination" tabindex="-1" aria-labelledby="createSysArgLabel" aria-hidden="true">
+        <!--Modal-->          
+        <div class="modal fade" id="create-urgency-level" tabindex="-1" aria-labelledby="createSysArgLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5">Khai báo nơi gửi/nhận văn bản</h1>
+                    <h1 class="modal-title fs-5">Khai báo độ khẩn </h1>
                 <div role="button" data-bs-dismiss="modal" aria-label="Close"><i class="fa-regular fa-xmark me-2"></i></div>
                 </div>
                 <div class="modal-body">
                     <div class="">
-                        <div class="container mt-3">
-                          <div class="category-label">Thông tin chung</div>
-                            <div class="row mt-3">
-                                <div class="col-12 col-md-6">
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Đơn vị <span style="color: #EB1212;"> *</span></label>
-                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="00 - Trụ sở">
-                                      </div>
-                                </div>
-
-                                <div class="col-12 col-md-6">
-                                  <div class="mb-3">
-                                      <label for="exampleFormControlInput1" class="form-label">Mã nơi gửi/nhận <span style="color: #EB1212;"> *</span></label>
-                                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Mã nơi gửi/nhận">
-                                    </div>
-                              </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 col-md-6">
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Tên nơi gửi/nhận <span style="color: #EB1212;"> *</span></label>
-                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Tên nơi gửi/nhận ">
-                                      </div>
-                                </div>
-
-                                <div class="col-12 col-md-6">
-                                  <div class="mb-3">
-                                      <label for="exampleFormControlInput1" class="form-label">Mã nhóm cha</label>
-                                        <select class="form-select" aria-label="Chức danh">
-                                          <option selected disabled>Mã nhóm cha</option>
-                                          <option value="1">One</option>
-                                          <option value="2">Two</option>
-                                          <option value="3">Three</option>
-                                        </select>                                   
-                                    </div>
-                              </div>
-                            </div>
-
-                            <div class="row">
-                              <div class="col-12 col-md-6">
-                                  <div class="mb-3">
-                                      <label for="exampleFormControlInput1" class="form-label">Tên tiếng anh </label>
-                                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Tên tiếng anh">
-                                    </div>
-                              </div>
-
-                              <div class="col-12 col-md-6">
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Tên viết tắt</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Tên viết tắt">
-                                  </div>
-                              </div>
-                            </div>
-
-                            <div class="row">
-                              <div class="col-12 col-md-6">
-                                  <div class="mb-3">
-                                      <label for="exampleFormControlInput1" class="form-label">Địa chỉ người nhận </label>
-                                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Địa chỉ người nhận">
-                                    </div>
-                              </div>
-
-                              <div class="col-12 col-md-6">
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Địa chỉ tiếng anh</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Địa chỉ tiếng anh">
-                                  </div>
-                            </div>
-                          </div>
-
-                          <div class="row">
-                            <div class="col-12 col-md-4">
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Điện thoại </label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Điện thoại">
-                                  </div>
-                            </div>
-
-                            <div class="col-12 col-md-4">
-                              <div class="mb-3">
-                                  <label for="exampleFormControlInput1" class="form-label">Điện thoại </label>
-                                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Điện thoại">
-                                </div>
-                          </div>
-
-                            <div class="col-12 col-md-4">
-                              <div class="mb-3">
-                                  <label for="exampleFormControlInput1" class="form-label">Số FAX</label>
-                                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Số FAX">
-                                </div>
-                          </div>
-                        </div>
-
+                        <div class="container">
                             <div class="row">
                                 <div class="col-12 col-md-12">
-                                    <div class="form-check mb-3">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                          Trạng thái kích hoạt
-                                        </label>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Mã độ khẩn <span style="color: #EB1212;"> *</span></label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Mã độ khẩn ">
                                       </div>
                                 </div>
                             </div>
-                            <div class="category-label">Các mã liên quan</div>
-                            <div class="row mt-2">
-                              <div class="col-6 col-lg-2">
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                      Bên trong
-                                    </label>
-                                </div>
+
+                            <div class="row">
+                              <div class="col-12 col-md-12">
+                                  <div class="mb-3">
+                                      <label for="exampleFormControlInput1" class="form-label">Tên độ khẩn <span style="color: #EB1212;"> *</span></label>
+                                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Tên độ khẩn">
+                                    </div>
                               </div>
-                              <div class="col-6 col-lg-2">
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                      Bên ngoài
-                                    </label>
-                                </div>
-                              </div>
-                              <div class="col-6 col-lg-4">
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                      Liên văn phòng nội bộ
-                                    </label>
-                                </div>
-                              </div>
-                              <div class="col-6 col-lg-4">
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                      Liên văn phòng bên ngoài
-                                    </label>
-                                </div>
-                              </div>
-                            </div>
+                          </div>
                         </div>
                     </div>
                 </div>

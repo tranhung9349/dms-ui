@@ -4,6 +4,12 @@
     border: transparent;
     padding: 6px 20px;
     height: 32px;
+    width: 100%;
+    
+    @media screen and (min-width: 767px) {
+        min-width: 300px;
+    }
+    
 }
 
 .category-label {
