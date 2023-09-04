@@ -48,3 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 });
+
+const exampleEl = document.getElementById('main-container')
+const popover = new bootstrap.Popover(exampleEl, options)

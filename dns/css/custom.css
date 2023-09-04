@@ -130,7 +130,7 @@ ol.timeline>li {
     color: #F24E4E;
 }
 
-#treeview .close:before {
+#treeview .parent.close:before {
     background-position: 0 top;
     content: "\f105";
     font-family: "Font Awesome 6 Pro";
@@ -169,7 +169,7 @@ ol.timeline>li {
     margin-bottom: 6px;
 }
 
-#treview .parent {
+#treeview .parent {
     margin-top: 6px;
     margin-bottom: 6px;
 }
@@ -192,6 +192,16 @@ ul#treeview>.parent {
     align-items: flex-start;
     align-self: stretch;
     margin-bottom: 16px;
+}
+
+#treeview ul li {
+    padding: 6px 0 6px 8px;
+    line-height: 18px;
+}
+
+#treeview ul li .selected {
+    background: #EFF8FF;
+    border-radius: 6px;
 }
 
 

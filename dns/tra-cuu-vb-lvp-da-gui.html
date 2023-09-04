@@ -6,13 +6,14 @@
     <link rel="stylesheet" href="./public/boostrap/bootstrap.min.css" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.11/themes/default/style.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" href="./public/fontawesome/all.min.css"/>
     <link rel="stylesheet" href="./css/custom.css"/>
     <link rel="stylesheet" href="./css/module.css"/>
     <link rel="stylesheet" href="./css/variable.css"/>
     <link rel="stylesheet" href="./css/layout.css"/>
 
-    <title>Danh mục phòng ban</title>
+    <title>Tra cứu văn bản LVP đã gửi</title>
 </head>
 <body>
     <main class="main-layout">
@@ -51,7 +52,7 @@
           <ul class="btn-toggle-nav list-unstyled fw-normal small mb-0">
             <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Nhóm người dùng</a></li>
             <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Chức danh</a></li>
-            <li class="my-3 menu-item-active"><a href="#" class="group-menu-item rounded">Danh mục Phòng ban</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Phòng ban</a></li>
             <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Nơi gửi /nhận văn bản</a></li>
             <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Phòng ban chức danh</a></li>
             <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Luồng chuyển văn bản</a></li>
@@ -75,7 +76,7 @@
             <li class="my-3"><a href="#" class="group-menu-item rounded">Tạo văn bản đi</a></li>
             <li class="my-3"><a href="#" class="group-menu-item rounded">Tạo dự thảo văn bản đi</a></li>
             <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục uỷ quyền xử lý văn bản</a></li>
-            <li class="my-3"><a href="#" class="group-menu-item rounded">Tra cứu văn bản LVP đã gửi</a></li>
+            <li class="my-3 menu-item-active"><a href="#" class="group-menu-item rounded">Tra cứu văn bản LVP đã gửi</a></li>
             <li class="my-3"><a href="#" class="group-menu-item rounded">Tra cứu văn bản LVP đã nhận</a></li>
           </ul>
         </div>
@@ -154,12 +155,15 @@
             <div class="page-header">
                 <div class="d-flex align-items-center">
                     <div class="page-title ps-4">
-                        <span>Danh mục phòng ban</span>
+                        <span>Tra cứu văn bản LVP đã gửi </span>
                         <span class="badge rounded-pill ms-1">14</span>
                     </div>
                     <span class="ms-4">
                         <input size="20" type="text" class="form-control search-input" placeholder="Nhập từ khoá tìm kiếm">
                     </span>
+                    <button type="button" class="btn btn-out btn-outline-primary cursor-pointer" data-bs-toggle="modal" data-bs-target="#doc-filter">
+                      <i class="fa-regular fa-filter-list"></i>
+                    </button>
                 </div>
             </div>
             <div class="page-content">
@@ -169,13 +173,28 @@
                      <!--TREE VIEW-->
                      <ul id="treeview">
                       <li class="parent">
-                          Danh sách các phòng ban
+                        <span class="nav-link active" 
+                            aria-current="page" 
+                            href="#ex1-tabs-1"
+                            id="ex1-tab-1"
+                            data-bs-toggle="tab"
+                            role="tab"
+                            aria-controls="ex1-tabs-1"
+                            aria-selected="true"
+                        >
+                        Danh sách các phòng ban
+                      </span>    
                           <ul style="display: block;">
                               <li class="parent">
                                   Trụ Sở Công Ty
                                   <ul style="display: block;">
-                                      <li class="">
+                                      <li class="parent">
                                           Hội Đồng Thành Viên
+                                          <ul style="display: block;">
+                                            <li class="selected">Tháng 8</li>
+                                            <li>Tháng 9</li>
+                                            <li>Tháng 10</li>
+                                          </ul>
                                       </li>
                                       <li class="">
                                         Hội Đồng Thành Viên
@@ -230,9 +249,13 @@
                       <thead class="table-light ">
                           <tr>
                               <th scope="col">STT <i class="fa-solid fa-sort"></i></th>
-                              <th scope="col" >Tên người dùng <i class="fa-solid fa-sort"></i></th>
-                              <th scope="col" >Họ tên đầy đủ <i class="fa-solid fa-sort"></i></th>
-                              <th scope="col"> Chức danh<i class="fa-solid fa-sort"></i></th>
+                              <th scope="col" >Đơn vị gửi/nhận <i class="fa-solid fa-sort"></i></th>
+                              <th scope="col" >Số vbản <i class="fa-solid fa-sort"></i></th>
+                              <th scope="col" >Số ký hiệu <i class="fa-solid fa-sort"></i></th>
+                              <th scope="col"> Ngày văn bản <i class="fa-solid fa-sort"></i></th>
+                              <th scope="col"> Trích yếu <i class="fa-solid fa-sort"></i></th>
+                              <th scope="col"> TT xử lý <i class="fa-solid fa-sort"></i></th>
+                              <th scope="col"> Thời gian gửi/nhận <i class="fa-solid fa-sort"></i></th>
                           </tr>
                       </thead>
                       <tbody>
@@ -241,16 +264,36 @@
                               <td><input type="text"></td>
                               <td><input type="text"/></td>
                               <td><input type="text"/></td>
+                              <td><input type="text"/></td>
+                              <td><input type="text"/></td>
+                              <td><input type="text"/></td>
+                              <td><input type="text"/></td>
                           </tr>
                           <tr> 
                               <td>
                                 <div class="d-flex justify-content-center">
-                                  3
+                                  2
                                 </div>
                               </td>
-                              <td>Travaux de rénovation</td>
-                              <td>Darrell Steward</td>
-                              <td>Capital</td>
+                              <td>Nva</td>
+                              <td>47200</td>
+                              <td>
+                                <a class="fw-semibold">
+                                  HG4 2TE
+                                </a>
+                              </td>
+                              <td>
+                                05/20/1954
+                              </td>
+                              <td>
+                                12/20/1929
+                              </td>
+                              <td>
+                                Chủ tịch HĐTV
+                              </td>
+                              <td>
+                                Chủ tịch HĐTV
+                              </td>
                           </tr>
                       </tbody>
                   </table>
@@ -263,53 +306,92 @@
 
             </div> 
         </section>
-
-        <!--Modal  Tao moi-->          
-        <div class="modal fade" id="create-user-title" tabindex="-1" aria-labelledby="createUser" aria-hidden="true">
+       
+        <div class="modal fade" id="doc-filter" tabindex="-1" aria-labelledby="createUser" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5">Khai báo chức danh</h1>
+                    <h1 class="modal-title fs-5">Tra Cứu Văn Bản Liên Văn Phòng Đã Gửi </h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="">
                         <div class="container">
-                            <!-- <div class="category-label">Thông tin chung</div> -->
+
                             <div class="row mt-2">
-                                <div class="col-12 col-md-12">
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Mã chức danh <span style="color: #EB1212;"> *</span></label>
-                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Mã nhóm nguòi dùng">
-                                      </div>
+                              <div class="col-12 col-md-6">
+                                <div class="mb-3">
+                                  <label for="exampleFormControlInput1" class="form-label">Ký hiệu văn bản </label>
+                                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ký hiệu văn bản ">
                                 </div>
+                              </div>
+                              <div class="col-12 col-md-6">
+                                <div class="mb-3">
+                                  <label for="exampleFormControlInput1" class="form-label">Từ ngày </label>
+                                  <input type="date" class="form-control" >
+                                </div>
+                              </div>
                             </div>
 
                             <div class="row mt-2">
-                              <div class="col-12 col-md-12">
+                              <div class="col-12 col-md-6">
                                   <div class="mb-3">
-                                      <label for="exampleFormControlInput1" class="form-label">Tên chức danh <span style="color: #EB1212;"> *</span></label>
-                                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Tên nhóm người dùng">
+                                      <label for="exampleFormControlInput1" class="form-label">Số văn bản </label>
+                                      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ký hiệu văn bản">
                                     </div>
                               </div>
+                              <div class="col-12 col-md-6">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Đơn vị nhận </label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ký hiệu văn bản">
+                                  </div>
                             </div>
+                          </div>
+
+                        <div class="row mt-2">
+                          <div class="col-12 col-md-12">
+                              <div class="mb-3">
+                                  <label for="exampleFormControlInput1" class="form-label">Trích yếu </label>
+                                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Trích yếu">
+                                </div>
+                          </div>
+                      </div>
+
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"><i class="fa-regular fa-xmark me-2"></i> Huỷ</button>
-                <button type="button" class="btn btn-primary"><i class="fa-regular fa-plus me-2"></i> Thêm mới</button>
+                <div class="modal-footer d-flex justify-content-between">
+                  <button class="btn btn-outline-danger" style="border: 1px solid transparent; ">
+                    Xoá bộ lọc
+                  </button>
+                  <div>
+                    <button type="button" class="btn btn-text" data-bs-dismiss="modal"> Huỷ bỏ</button>
+                    <button type="button" class="btn btn-text" style="color: #1B7CC2;"> Áp dụng</button>
+                  </div>
                 </div>
             </div>
             </div>
         </div>
-
+        
     </main>
+
+    <script>
+    jQuery(document).ready(function() {
+        $('input[name="daterange"]').daterangepicker({
+          opens: 'left'
+        }, function(start, end, label) {
+          console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+        });
+      });
+      </script>
 
     <script defer src="./js/layout.js"></script>
     <script defer src="./js/treeview.js"></script>
     <script src="./public/boostrap/bootstrap.bundle.min.js"></script>
    <!-- Thư viện jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 </body>
 </html>

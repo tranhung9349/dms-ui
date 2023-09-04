@@ -6,13 +6,14 @@
     <link rel="stylesheet" href="./public/boostrap/bootstrap.min.css" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.11/themes/default/style.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" href="./public/fontawesome/all.min.css"/>
     <link rel="stylesheet" href="./css/custom.css"/>
     <link rel="stylesheet" href="./css/module.css"/>
     <link rel="stylesheet" href="./css/variable.css"/>
     <link rel="stylesheet" href="./css/layout.css"/>
 
-    <title>Danh mục phòng ban</title>
+    <title>Tạo văn bản dự thảo đi</title>
 </head>
 <body>
     <main class="main-layout">
@@ -51,7 +52,7 @@
           <ul class="btn-toggle-nav list-unstyled fw-normal small mb-0">
             <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Nhóm người dùng</a></li>
             <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Chức danh</a></li>
-            <li class="my-3 menu-item-active"><a href="#" class="group-menu-item rounded">Danh mục Phòng ban</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Phòng ban</a></li>
             <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Nơi gửi /nhận văn bản</a></li>
             <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Phòng ban chức danh</a></li>
             <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Luồng chuyển văn bản</a></li>
@@ -73,7 +74,7 @@
             <li class="my-3"><a href="#" class="group-menu-item rounded">Tra cứu văn bản</a></li>
             <li class="my-3"><a href="#" class="group-menu-item rounded">Tạo văn bản đến</a></li>
             <li class="my-3"><a href="#" class="group-menu-item rounded">Tạo văn bản đi</a></li>
-            <li class="my-3"><a href="#" class="group-menu-item rounded">Tạo dự thảo văn bản đi</a></li>
+            <li class="my-3 menu-item-active"><a href="#" class="group-menu-item rounded">Tạo dự thảo văn bản đi</a></li>
             <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục uỷ quyền xử lý văn bản</a></li>
             <li class="my-3"><a href="#" class="group-menu-item rounded">Tra cứu văn bản LVP đã gửi</a></li>
             <li class="my-3"><a href="#" class="group-menu-item rounded">Tra cứu văn bản LVP đã nhận</a></li>
@@ -154,156 +155,282 @@
             <div class="page-header">
                 <div class="d-flex align-items-center">
                     <div class="page-title ps-4">
-                        <span>Danh mục phòng ban</span>
+                        <span>Tạo văn bản dự thảo đi </span>
                         <span class="badge rounded-pill ms-1">14</span>
                     </div>
-                    <span class="ms-4">
-                        <input size="20" type="text" class="form-control search-input" placeholder="Nhập từ khoá tìm kiếm">
-                    </span>
                 </div>
             </div>
             <div class="page-content">
-              <div class="row pt-4">
-
-                <div class="col-12 col-lg-3">
-                     <!--TREE VIEW-->
-                     <ul id="treeview">
-                      <li class="parent">
-                          Danh sách các phòng ban
-                          <ul style="display: block;">
-                              <li class="parent">
-                                  Trụ Sở Công Ty
-                                  <ul style="display: block;">
-                                      <li class="">
-                                          Hội Đồng Thành Viên
-                                      </li>
-                                      <li class="">
-                                        Hội Đồng Thành Viên
-                                    </li>
-                                    <li class="">
-                                      Hội Đồng Thành Viên
-                                  </li>
-                                  </ul>
-                              </li>
-                              <li class="parent">
-                                  Ban Bảo Hiểm
-                                  <ul>
-                                      <li class="">
-                                          Phòng Bảo Hiểm 1
-                                      </li>
-                                      <li class="">
-                                        Phòng Bảo Hiểm 2
-                                    </li>
-                                  </ul>
-                              </li>
-                              <li class="parent">
-                                Ban Bảo Hiểm
-                                <ul>
-                                    <li class="">
-                                        Phòng Bảo Hiểm 1
-                                    </li>
-                                    <li class="">
-                                      Phòng Bảo Hiểm 2
-                                  </li>
-                                </ul>
-                            </li>
-                            <li class="parent">
-                              Ban Bảo Hiểm
-                              <ul>
-                                  <li class="">
-                                      Phòng Bảo Hiểm 1
-                                  </li>
-                                  <li class="">
-                                    Phòng Bảo Hiểm 2
-                                </li>
-                              </ul>
-                          </li>
-                          </ul>
-                      </li>
-                  </ul>
+              <div class="w-100">
+                <div class="d-flex align-items-center justify-content-between w-100 my-3">
+                    <ul class="nav nav-tabs w-100" id="ex1" role="tablist">
+                        <li class="nav-item">
+                          <span class="nav-link active" 
+                            aria-current="page" 
+                            href="#ex1-tabs-1"
+                            id="ex1-tab-1"
+                            data-bs-toggle="tab"
+                            role="tab"
+                            aria-controls="ex1-tabs-1"
+                            aria-selected="true"
+                        >Thông tin văn bản</span>
+                        </li>
+                        <li class="nav-item">
+                          <span 
+                          class="nav-link"
+                          id="ex1-tab-2"
+                          data-bs-toggle="tab"
+                          href="#ex1-tabs-2"
+                          role="tab"
+                          aria-controls="ex1-tabs-2"
+                          aria-selected="false"
+                          > Danh sách chuyển văn bản 
+                        </span>
+                        </li>
+                      </ul>      
                 </div>
+                <!--Tab Content-->
+                <div class="tab-content" id="ex1-content">
+                    <!--Tab 1 Content-->
+                    <div class="tab-pane fade show active" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
+                      <div class="mt-2">
+                        <div class="category-label">Thông tin chung</div>
+                        <div class="container mt-3">
 
-                <div class="col-12 col-lg-9">
-                  <!--Table-->
-                  <div class="table-responsive ">
-                  <table class="table table-striped-even table-hover" id="system-arg-list">
-                      <thead class="table-light ">
-                          <tr>
-                              <th scope="col">STT <i class="fa-solid fa-sort"></i></th>
-                              <th scope="col" >Tên người dùng <i class="fa-solid fa-sort"></i></th>
-                              <th scope="col" >Họ tên đầy đủ <i class="fa-solid fa-sort"></i></th>
-                              <th scope="col"> Chức danh<i class="fa-solid fa-sort"></i></th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr>
-                              <td scope="row"><input id="td-stt" type="text"/></td>
-                              <td><input type="text"></td>
-                              <td><input type="text"/></td>
-                              <td><input type="text"/></td>
-                          </tr>
-                          <tr> 
-                              <td>
-                                <div class="d-flex justify-content-center">
-                                  3
-                                </div>
-                              </td>
-                              <td>Travaux de rénovation</td>
-                              <td>Darrell Steward</td>
-                              <td>Capital</td>
-                          </tr>
-                      </tbody>
-                  </table>
-                  </div>
-                </div>
-              </div>
-
-
-
-
-            </div> 
-        </section>
-
-        <!--Modal  Tao moi-->          
-        <div class="modal fade" id="create-user-title" tabindex="-1" aria-labelledby="createUser" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5">Khai báo chức danh</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="">
-                        <div class="container">
-                            <!-- <div class="category-label">Thông tin chung</div> -->
-                            <div class="row mt-2">
-                                <div class="col-12 col-md-12">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
                                     <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Mã chức danh <span style="color: #EB1212;"> *</span></label>
-                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Mã nhóm nguòi dùng">
+                                        <label for="exampleFormControlInput1" class="form-label">Số dự thảo <span style="color: #EB1212;"> *</span></label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                      </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Số văn bản dự thảo <span style="color: #EB1212;"> *</span></label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
                                       </div>
                                 </div>
                             </div>
 
-                            <div class="row mt-2">
-                              <div class="col-12 col-md-12">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Ngày dự thảo <span style="color: #EB1212;"> *</span></label>
+                                        <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="Ngày đến ">
+                                      </div>
+                                </div>
+                                <div class="col-12 col-md-6">
                                   <div class="mb-3">
-                                      <label for="exampleFormControlInput1" class="form-label">Tên chức danh <span style="color: #EB1212;"> *</span></label>
-                                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Tên nhóm người dùng">
-                                    </div>
-                              </div>
+                                    <label for="exampleFormControlInput1" class="form-label">Người ký văn bản <span style="color: #EB1212;"> *</span></label>
+                                    <select class="form-select" aria-label="Loại văn bản">
+                                      <option selected disabled>Người ký văn bản </option>
+                                      <option value="1">One</option>
+                                      <option value="2">Two</option>
+                                      <option value="3">Three</option>
+                                    </select>   
+                                  </div>
+                                </div>
                             </div>
+
+                            <div class="row">
+                              <div class="col-12 col-md-6">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Hạn xử lý <span style="color: #EB1212;"> *</span></label>
+                                    <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="Ngày đến ">
+                                  </div>
+                            </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Số trang </label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                      </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Ký hiệu văn bản <span style="color: #EB1212;"> *</span> </label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                      </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Độ khẩn <span style="color: #EB1212;"> *</span></label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                      </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Trích yếu <span style="color: #EB1212;"> *</span></label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                      </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Nơi nhận văn bản </label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                      </div>
+                                </div>
+                            </div>
+
+                          
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"><i class="fa-regular fa-xmark me-2"></i> Huỷ</button>
-                <button type="button" class="btn btn-primary"><i class="fa-regular fa-plus me-2"></i> Thêm mới</button>
-                </div>
-            </div>
-            </div>
-        </div>
 
+                    <div class="mt-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="category-label">Tài liệu đính kèm</div> 
+                            <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-outline-secondary"><i class="fa-light fa-scanner-touchscreen me-1"></i> Quét văn bản</button>
+                                <button type="button" class="btn btn-outline-secondary"><i class="fa-regular fa-download me-1"></i> Tải văn bản</button>
+                            </div>    
+                        </div>
+                        
+                        <div class="mt-3">
+                            <div class="table-responsive ">
+                                <table class="table table-hover">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th scope="col">STT <i class="fa-solid fa-sort"></i></th>
+                                            <th scope="col">Tên tệp <i class="fa-solid fa-sort"></i></th>
+                                            <th scope="col">Kích thước <i class="fa-solid fa-sort"></i></th>
+                                            <th scope="col">Ngày cập nhật cuối<i class="fa-solid fa-sort"></i></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td scope="row"><input type="text"/></td>
+                                            <td scope="col"><input type="text"/></td>
+                                            <td scope="col"><input type="text"/></td>
+                                            <td scope="col"><input type="text"/></td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td><a href="#">Tai lieu Bao cao giam dinh.docx</a></td>
+                                            <td>100kb</td>
+                                            <td>12/12/2022</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mt-3 d-flex justify-content-end gap-2 flex-wrap">
+                          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"><i class="fa-regular fa-x me-1"></i> Huỷ</button>
+                          <button type="button" class="btn btn-success"><i class="fa-regular fa-rotate-right me-1"></i> Trả lại </button>
+                          <button type="button" class="btn btn-primary"><i class="fa-regular fa-check me-1"></i> Xác nhận </button>
+                      </div>
+                        
+                    </div>
+
+                        
+                </div>
+                <!--Tab 2 Content-->
+                <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+                  <div class="mt-2">
+                    <div class="text-uppercase fw-semibold" style="color: #1B7CC2;">Thông tin xử lý</div> 
+                    <div class="mt-3">
+                        <input class="form-control" type="text" placeholder="Ký hiệu văn bản"/>
+
+                        <div class="mt-2" style="margin-left: 12px;margin-right: 12px;">
+                            <div class="row tree-list-header">
+                                <div class="col-8">
+                                    <span style="color: #1B7CC2;">Tài khoản chuyển</span>
+                                </div>
+                                <div class="col-2">
+                                    <span style="color: #1B7CC2;">Chủ trì</span>
+                                </div>
+                                <div class="col-2">
+                                    <span style="color: #1B7CC2;">Phối hợp</span>
+                                </div>
+                            </div>
+
+                            <!--TREE VIEW-->
+                            <ul id="treeview">
+                                <li class="parent">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <span>Hội đồng thành viên</span>
+                                        </div>
+                                        <div class="col-2">
+                                            <span><input type="checkbox"/></span>
+                                        </div>
+                                        <div class="col-2">
+                                            <span><input type="checkbox"/></span>
+                                        </div>
+                                    </div>
+                                    <ul style="display: block;">
+                                        <li class="">
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <span><i class="fa-regular fa-user me-2" style="color: #F24E4E;"></i>
+                                                        <span>Le, Nguyen Thanh (B-BHHH) (Phó GĐ phụ trách Ban)</span>
+                                                    </span>
+                                                </div>
+                                                <div class="col-2" style="position: relative;">
+                                                    <span style="position: static;margin-left: -14px;"><input type="checkbox"/></span>
+                                                </div>
+                                                <div class="col-2" style="position: relative;">
+                                                    <span style="position: static;margin-left: -6px;"><input type="checkbox"/></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="">
+                                          <div class="row">
+                                              <div class="col-8">
+                                                  <span><i class="fa-regular fa-user me-2" style="color: #F24E4E;"></i>
+                                                      <span>Le, Nguyen Thanh (B-BHHH) (Phó GĐ phụ trách Ban)</span>
+                                                  </span>
+                                              </div>
+                                              <div class="col-2" style="position: relative;">
+                                                  <span style="position: static;margin-left: -14px;"><input type="checkbox"/></span>
+                                              </div>
+                                              <div class="col-2" style="position: relative;">
+                                                  <span style="position: static;margin-left: -6px;"><input type="checkbox"/></span>
+                                              </div>
+                                          </div>
+                                      </li>
+                                      
+                                      <li class="">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <span><i class="fa-regular fa-user me-2" style="color: #F24E4E;"></i>
+                                                    <span>Le, Nguyen Thanh (B-BHHH) (Phó GĐ phụ trách Ban)</span>
+                                                </span>
+                                            </div>
+                                            <div class="col-2" style="position: relative;">
+                                                <span style="position: static;margin-left: -14px;"><input type="checkbox"/></span>
+                                            </div>
+                                            <div class="col-2" style="position: relative;">
+                                                <span style="position: static;margin-left: -6px;"><input type="checkbox"/></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                        
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="position-absolute d-flex justify-content-end gap-2" style="bottom: 12px; right: 12px;">
+                          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"><i class="fa-regular fa-x me-1"></i> Huỷ</button>
+                          <button type="button" class="btn btn-primary"><i class="fa-regular fa-check me-1"></i> Xác nhận </button>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        
     </main>
 
     <script defer src="./js/layout.js"></script>
@@ -311,5 +438,8 @@
     <script src="./public/boostrap/bootstrap.bundle.min.js"></script>
    <!-- Thư viện jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 </body>
 </html>
