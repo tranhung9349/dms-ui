@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/boostrap/bootstrap.min.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.11/themes/default/style.min.css" />
+    <link rel="stylesheet" href="./public/fontawesome/all.min.css"/>
+    <link rel="stylesheet" href="./css/custom.css"/>
+    <link rel="stylesheet" href="./css/module.css"/>
+    <link rel="stylesheet" href="./css/variable.css"/>
+    <link rel="stylesheet" href="./css/layout.css"/>
+    
+    <title>DMS</title>
+</head>
+<body>
+    <main class="main-layout">
+
+        <!--SIDEBAR-->
+        <section class="side-bar" id="side-bar">
+          <!-- <span class="toggle-btn" id="toggle-btn"><i class='bx bx-menu' id="header-toggle"></i></span> -->
+          <div class="group-menu flex-shrink-0 p-3 mt-5" style="width: 300px;">
+          <div class="d-flex align-items-center ms-0 active">
+            <i class='bx bx-file'></i>
+            <span class="mx-3">DNS</span>
+          </div>
+  
+          <div class="my-3 group-menu-items">
+            <div class="menu-item-active">
+              <a href="#" class="group-menu-item">Quản lý văn bản </a>
+            </div>
+          </div>
+           
+          <div class="my-3 group-menu-items">
+          <div class="btn-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#systems-collapse" aria-expanded="false" role="button" aria-controls="systems-collapse">
+            Hệ thống
+          </div>
+          <div class="collapse ml-2" id="systems-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal small mb-0">
+              <li class="my-3"><a href="#" class="group-menu-item rounded">Khai báo tham số</a></li>
+              <li class="my-3"><a href="#" class="group-menu-item rounded">Quản trị người dùng</a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="my-3 group-menu-items">
+        <div class="btn-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#dictionary-collapse" aria-expanded="false" role="button" aria-controls="dictionary-collapse">
+          Từ điển
+        </div>
+        <div class="collapse ml-2" id="dictionary-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal small mb-0">
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Nhóm người dùng</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Chức danh</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Phòng ban</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Nơi gửi /nhận văn bản</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Phòng ban chức danh</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Luồng chuyển văn bản</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Số văn bản</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Loại văn bản</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Người ký</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Mức độ khẩn</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Uỷ quyền</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="my-3 group-menu-items">
+        <div class="btn-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#document-collapse" aria-expanded="false" role="button" aria-controls="document-collapse">
+          Văn bản
+        </div>
+        <div class="collapse ml-2" id="document-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal small mb-0">
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Tra cứu văn bản</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Tạo văn bản đến</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Tạo văn bản đi</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Tạo dự thảo văn bản đi</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục uỷ quyền xử lý văn bản</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Tra cứu văn bản LVP đã gửi</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Tra cứu văn bản LVP đã nhận</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="my-3 group-menu-items">
+        <div class="btn-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#report-collapse" aria-expanded="false" role="button" aria-controls="report-collapse">
+          Báo cáo
+        </div>
+        <div class="collapse ml-2" id="report-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal small mb-0">
+            <li class="group-menu-items mt-3">
+                <div class="btn-toggle collapsed text-nowrap" data-bs-toggle="collapse" data-bs-target="#report-admin-collapse" aria-expanded="false" role="button" aria-controls="report-collapse">
+                    Báo cáo văn bản - Administrator
+                </div>
+                <div class="collapse ml-2" id="report-admin-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal mb-0">
+                    <li class="mt-3"><a href="#" class="group-menu-item rounded">Báo Cáo Hoạt Động Người Dùng (Admin)</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="group-menu-items mt-3">
+                <div class="btn-toggle collapsed text-nowrap" data-bs-toggle="collapse" data-bs-target="#report-vanthu-collapse" aria-expanded="false" role="button" aria-controls="report-collapse">
+                    Báo cáo văn bản - Văn thư
+                </div>
+                <div class="collapse ml-2" id="report-vanthu-collapse">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal mb-0">
+                        <li class="my-3"><a href="#" class="group-menu-item rounded">Báo Cáo Văn Bản Đến (văn thư)</a></li>
+                        <li class="my-3"><a href="#" class="group-menu-item rounded">Báo Cáo Văn Bản Đi (văn thư)</a></li>
+                        <li class="mt-3"><a href="#" class="group-menu-item rounded">Báo Cáo Tình Trạng Xử Lý Văn Bản Đến (văn thư)</a></li>
+                        <li class="mt-3"><a href="#" class="group-menu-item rounded">Báo Cáo Tình Trạng Xử Lý Văn Bản Đi (văn thư)</a></li>
+                        <li class="mt-3"><a href="#" class="group-menu-item rounded">Báo Cáo Tình Trạng Xử Lý Văn Bản Đến Chi Tiết Theo Người Dùng (văn thư)</a></li>
+                        <li class="mt-3"><a href="#" class="group-menu-item rounded">Báo Cáo Tình Trạng Xử Lý Văn Bản Đi Chi Tiết Theo Người Dùng (văn thư)</a></li>
+                        <li class="mt-3"><a href="#" class="group-menu-item rounded">Báo Cáo Tình Trạng Xử Lý Văn Bản Đi Chi Tiết Theo Người Dùng (văn thư)</a></li>
+                      </ul>
+                </div>
+              </li>
+              <li class="group-menu-items mt-3">
+                <div class="btn-toggle collapsed text-nowrap" data-bs-toggle="collapse" data-bs-target="#report-user-collapse" aria-expanded="false" role="button" aria-controls="report-collapse">
+                    Báo cáo văn bản - Người dùng
+                </div>
+                <div class="collapse ml-2" id="report-user-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal mb-0">
+                    <li class="my-3"><a href="#" class="group-menu-item rounded">Báo Cáo Văn Bản Đến (người dùng)</a></li>
+                    <li class="my-3"><a href="#" class="group-menu-item rounded">Báo Cáo Văn Bản Đi (người dùng)</a></li>
+                  </ul>
+                </div>
+              </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center ms-0 position-absolute bottom-0 pb-2 logout-button">
+        <div class="d-flex logout-button">
+            <div class="d-flex align-items-center cursor-pointer">
+                <img src="https://us.123rf.com/450wm/anatolir/anatolir2011/anatolir201105528/159470802-jurist-avatar-icon-flat-style.jpg?ver\u003d6"/>
+                <span class="d-inline-block mx-3">
+                    Username
+                </span>
+            </div>
+            <div class="d-flex gap-1">
+                <button type="button" class="btn btn-light log-out" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Đăng nhập lại">
+                    <div 
+                        class='cursor-pointer'
+                        type='button'
+                    > 
+                        <i class="fa-regular fa-rotate-right"></i>
+                    </div>
+                </button>
+                <button type="button" class="btn btn-light log-out" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Quản lý tài khoản kí số cá nhân">
+                    <div 
+                        class='cursor-pointer'
+                        data-bs-toggle='modal' 
+                        data-bs-target='#personal-sign-mng'
+                        type='button'
+                    > 
+                        <i class="fa-regular fa-pager"></i>
+                    </div>
+                </button>
+                
+                <button type="button" class="btn btn-light log-out" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Đăng xuất">
+                    <span><i class="fa-regular fa-right-from-bracket"></i></span>
+                </button>
+            </div>
+        </div>
+      </div>
+  
+        </section>
+
+        <!--CONTENT-->
+        <section class="main-container">
+          <span class="toggle-btn" id="toggle-action"><i class='bx bx-menu' id="header-toggle"></i></span>
+
+          <!--Notification box-->
+            <section>
+                <div hidden >
+                <div data-name="noti-box-popover-content">
+                    <div class="d-flex justify-content-between mb-3 fw-bold">
+                        <div class="fw-bold">Thông báo</div>
+                        <div>
+                            ...
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span class="fw-semibold">Mới</span>
+                        <a href="">Xem tất cả</a>
+                    </div>
+                    <div class="new-noti d-flex flex-column gap-2 mt-3 mb-3 ps-2">
+                        <span>Bạn có 1 thông báo mới <a href="" class="float-end">Chi tiết</a></span>
+                        <span>Bạn có 1 thông báo mới dài loằng ngoằng xuống dòng thứ 2</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span class="fw-semibold">Trước đó </span>
+                    </div>
+                    <div class="old-noti flex-column gap-2 mt-3 mb-3 ps-2">
+                        <p>Bạn có 1 thông báo cũ hơn </p>
+                        <p>Bạn có 1 thông báo cũ hơn </p>
+                        <p>Bạn có 1 thông báo cũ hơn </p>
+                        <p>Bạn có 1 thông báo cũ hơn </p>
+                        <p>Bạn có 1 thông báo cũ hơn </p>
+                    </div>
+                </div>
+                </div>            
+                <span 
+                class="notification-btn"
+                id="noti-box" 
+                tabindex="0" 
+                class="btn btn-lg btn-danger" 
+                role="button" 
+                data-bs-toggle="popover"  
+                data-bs-placement="bottom"
+            >
+                <i class="fa-regular fa-bell"></i>
+                </span>
+            </section>
+
+        <!--Page Content-->
+        <!--............-->
+          
+        </section>
+        
+        <!--Modal QUan ly thong tin tai khoan ky so-->
+        <div class="modal fade" id="personal-sign-mng" tabindex="-1" aria-labelledby="cancelReceiveDocLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Quản lý thông tin Tài khoản ký số</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Số định danh <span style="color: #EB1212;"> *</span> </label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Số định danh ">
+                                  </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Mật khẩu <span style="color: #EB1212;"> *</span></label>
+                                    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Mật khẩu">
+                                  </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Họ và tên <span style="color: #EB1212;"> *</span></label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                  </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Email <span style="color: #EB1212;"> *</span></label>
+                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"><i class="fa-regular fa-x me-2"></i> Huỷ</button>
+                <button type="button" class="btn btn-primary"><i class="fa-regular fa-check me-2"></i> Lưu</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        
+
+      </main>
+    <script defer src="./js/layout.js"></script>
+    <script defer src="./js/treeview.js"></script>
+    <script src="./public/boostrap/bootstrap.bundle.min.js"></script>
+   <!-- Thư viện jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Thư viện jQuery TreeView -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.11/jstree.min.js"></script>  
+</body>
+</html>

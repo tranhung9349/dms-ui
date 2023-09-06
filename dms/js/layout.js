@@ -49,5 +49,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-const exampleEl = document.getElementById('main-container')
-const popover = new bootstrap.Popover(exampleEl, options)
+
+// const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+// const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})
+
+    
+            
+$(document).ready(function() {
+                    
+  var options = {
+      html: true,
+      // title: "<div>Thông báo </div>",
+      //html element
+      //content: $("#popover-content")
+      content: $('[data-name="noti-box-popover-content"]'),
+      //Doing below won't work. Shows title only
+      //content: $("#popover-content").html()
+      // placement: 'bottom'
+  }
+  var exampleEl = document.getElementById('noti-box')
+  var popover = new bootstrap.Popover(exampleEl, options)
+})
