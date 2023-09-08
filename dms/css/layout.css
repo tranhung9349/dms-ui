@@ -204,6 +204,15 @@ a.group-menu-item {
     padding: 0;
 }
 
+.side-bar:not(.side-bar.expand) .user-functions {
+    position: absolute;
+    bottom: 52px;
+    left: -4px;
+    display: flex;
+    flex-direction: column-reverse;
+    transition: all 0.5 ease;
+}
+
 .side-bar>.group-menu>.active {
    background: transparent;
 }
