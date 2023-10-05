@@ -14,12 +14,32 @@ document.addEventListener("DOMContentLoaded", function () {
         // console.log(toggle);
         // show navbar
         nav.classList.toggle("expand");
+        if(nav.className.includes('expand')) {
+          changeImage('expand')
+        }
+        else changeImage()
       });
     }
   };
 
   showNavbar("toggle-action", "side-bar");
 });
+
+
+ function changeImage(expand) {
+          const logo = document.getElementById('app-logo');
+          // console.log(logo)
+          if (!expand) {
+            logo.src = './css/logo2.png';
+            logo.style.width = '44px';
+            logo.style.height = '40px';
+          } else {
+            logo.src = './css/logo.png';
+            logo.style.width = '128px';
+            logo.style.height = '40px';
+          }
+        }
+
 
 $(document).ready(function() {
   $("body").tooltip({ selector: '[data-bs-toggle=tooltip]' });
