@@ -179,6 +179,7 @@ input[type="text"]:not(.form-control) {
     overflow: scroll;
 }
 
+
 .modal-dialog>.modal-content>.modal-footer {
     border-top: transparent;
 }
@@ -220,14 +221,14 @@ input[id="td-stt"] {
     min-width: 55px;
 }
 
-.tab-content {
-    overflow: auto;
-    max-height: calc(100vh - 150px);
+/* .tab-content { */
+    /* overflow: auto;
+    max-height: calc(100vh - 150px); */
 
-    @media screen and (max-width: 767px ) {
+    /* @media screen and (max-width: 767px ) {
         max-height: calc(100vh - 200px);
-    }
-}
+    } */
+/* } */
 
 
 
