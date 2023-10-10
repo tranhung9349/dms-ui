@@ -175,6 +175,8 @@ input[type="text"]:not(.form-control) {
 
 .modal-dialog>.modal-content>.modal-body {
     padding: 0 16px;
+    height: 550px;
+    overflow: scroll;
 }
 
 .modal-dialog>.modal-content>.modal-footer {
